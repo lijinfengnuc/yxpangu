@@ -1,0 +1,47 @@
+app:
+  version: @project.version@
+  build:
+    time: @build.time@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  profiles:
+    active: @profile@
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 10000
+      idle-timeout: 300000
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      validation-timeout: 3000
+      schema: yx_pangu
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+    database: postgresql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      id:
+        new_generator_mappings: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  path: logs
+  file:
+    max-size: 1MB
+  level:
+    root: info
