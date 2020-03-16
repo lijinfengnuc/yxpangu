@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>yxpangu-common</module>
-        <module>yxpangu-model</module>
-        <module>yxpangu-persist</module>
-        <module>yxpangu-core</module>
-        <module>yxpangu-api</module>
+        <module>yx-pangu-common</module>
+        <module>yx-pangu-model</module>
+        <module>yx-pangu-persist</module>
+        <module>yx-pangu-core</module>
+        <module>yx-pangu-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -16,10 +16,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>nuc.ljf.pangu</groupId>
-    <artifactId>yxpangu</artifactId>
+    <artifactId>yx-pangu</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
-    <name>Yanxi Pangu :: Parent</name>
+    <name>YX Pangu :: Parent</name>
     <description>The basic sub-project of yanxi project</description>
 
     <properties>
@@ -36,22 +36,22 @@
         <dependencies>
             <dependency>
                 <groupId>nuc.ljf.pangu</groupId>
-                <artifactId>yxpangu-core</artifactId>
+                <artifactId>yx-pangu-core</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>nuc.ljf.pangu</groupId>
-                <artifactId>yxpangu-persist</artifactId>
+                <artifactId>yx-pangu-persist</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>nuc.ljf.pangu</groupId>
-                <artifactId>yxpangu-model</artifactId>
+                <artifactId>yx-pangu-model</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>nuc.ljf.pangu</groupId>
-                <artifactId>yxpangu-common</artifactId>
+                <artifactId>yx-pangu-common</artifactId>
                 <version>${revision}</version>
             </dependency>
 
